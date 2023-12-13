@@ -1,0 +1,48 @@
+{
+	"wifi": [
+		{
+			"ssid": "SSID1",
+			"password": "PASSWORD1"
+		},
+		{
+			"ssid": "SSID2",
+			"password": "PASSWORD2"
+		},
+		{
+		    "ssid":  "SSID3",
+		    "password": "PASSWORD3"
+
+		}
+	],
+	"timezone": "TIMEZONE",
+	"openweathermap": {
+		"ApiKey": "openweathermap_API_KEY",
+		"city": "CITY, STATE",
+		"countryCode": "COUNTRY",
+		"latitude": 45,
+		"longitude": -120
+	},
+	"poems":[
+		{
+			"title": "'Twas the Night Before Christmas",
+			"author": "Clement Clarke Moore",
+			"text_color": 65535,
+			"background_color": 0,
+			"path":"/Documents/Poems/NightBeforeChristmas.txt"
+		},
+		{
+			"title": "Stopping By Woods On A Snowy Evening",
+			"author": "Robert Frost",
+			"text_color": 65535,
+			"background_color": 0,
+			"path":"/Documents/Poems/StoppingByTheWoods.txt"
+		},
+		{
+			"title": "The Road Not Taken",
+			"author": "Robert Frost",
+			"text_color": 0,
+			"background_color": 2047,
+			"path":"/Documents/Poems/RoadNotTaken.txt"
+		}
+	]
+}
