@@ -1,7 +1,5 @@
 /*******************************************************************
-    DemoApp for the ESP32 Cheap Yellow Display.
-
-    https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display
+    Based on https://github.com/adafruit/Adafruit_ILI9341/tree/master/examples/mandelbrot
 
     Written by Rick Hale
  *******************************************************************/

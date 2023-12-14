@@ -6,6 +6,9 @@
 #include <SPI.h>
 #include <Arduino_JSON.h>
 
+typedef void (*callbackFunction)(const char* parameter);
+
+void listDirWithCallback(fs::FS &fs, const char * dirname, uint8_t levels, callbackFunction func);
 void mountSdcard();
 void showCardInfo();
 void listDir(fs::FS &fs, const char * dirname, uint8_t levels);

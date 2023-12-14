@@ -1,8 +1,6 @@
 /*******************************************************************
     DemoApp for the ESP32 Cheap Yellow Display.
 
-    https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display
-
     Written by Rick Hale
  *******************************************************************/
 
@@ -75,10 +73,10 @@ bool WifiClient::connectWifi() {
   return connected;
 }
 
-void WifiClient::Start() {
+void WifiClient::start() {
   //create a task that will be executed in the Task1code() function, with priority 1 and executed on core 0
   xTaskCreatePinnedToCore(
-    this->ShowDateTemp,   /* Task function. */
+    this->showDateAndTemp,   /* Task function. */
     "DateTemp",     /* name of task. */
     10000,       /* Stack size of task */
     this,        /* parameter of the task */
@@ -99,7 +97,7 @@ void WifiClient::checkWeather() {
       double longitude = (double) config["openweathermap"]["longitude"];
       String apiKey = (const char *) config["openweathermap"]["ApiKey"];
 
-      String serverPath = "http://api.openweathermap.org/data/2.5/weather?lat=" + (String) latitude  + 
+      String serverPath = "http://api.openweathermap.org/data/2.5/weather?lat=" + (String) latitude  +
         "&lon=" + (String) longitude +
         "&APPID=" + apiKey + "&units=Imperial";
       Serial.printf("checking weather, serverPath=%s\n", serverPath.c_str());
@@ -148,8 +146,8 @@ void WifiClient::checkWeather() {
   }
 }
 
-void WifiClient::ShowDateTemp(void * pvParameters) {
-  WifiClient *l_pThis = (WifiClient *) pvParameters; 
+void WifiClient::showDateAndTemp(void * pvParameters) {
+  WifiClient *l_pThis = (WifiClient *) pvParameters;
   Serial.printf("ShowDateTemp running on core %d\n", xPortGetCoreID());
   String temperatureStr = "??";
   String curDateTime;
@@ -175,7 +173,7 @@ void WifiClient::ShowDateTemp(void * pvParameters) {
     String newDateTime = temperatureStr + " " + strftime_buf;
     if (newDateTime != curDateTime) {
       if (counter++ % 100 == 0) {
-        Serial.printf("ShowDateTemp(), temperature: %s, current date/time: %s\n", temperatureStr, strftime_buf);
+        Serial.printf("showDateAndTemp(), temperature: %s, current date/time: %s\n", temperatureStr, strftime_buf);
       }
       curDateTime = newDateTime;
       int x = 240;

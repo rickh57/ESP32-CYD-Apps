@@ -1,8 +1,6 @@
 /*******************************************************************
     DemoApp for the ESP32 Cheap Yellow Display.
 
-    https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display
-
     Written by Rick Hale
  *******************************************************************/
 

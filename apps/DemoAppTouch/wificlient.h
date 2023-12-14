@@ -12,13 +12,13 @@ private:
   bool _firstTime = true;
   unsigned long _lastTime = 0;
 
-  static void ShowDateTemp(void * pvParameters);
+  static void showDateAndTemp(void * pvParameters);
   void checkWeather();
 
 public:
   WifiClient(JSONVar config);
 
-  void Start();
+  void start();
   bool connectWifi();
   const char * get_timezone();
   double temperature() { return _temperature; }
