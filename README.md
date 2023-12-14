@@ -16,6 +16,8 @@ The sdcard folder contains sample configuration and data for the apps to use. Yo
 
 The pictures were copied from the [TFT_eSPI examples](https://github.com/Bodmer/TFT_eSPI/tree/master/examples/Generic/ESP32_SDcard_jpeg/Data). The sample program will display all of the jpeg pictures in `/Documents/Pictures`. However, the display size is only 320x240 pixels so the pictures will likely be trimmed.
 
+The jpeg display logic is based on [ESP32_SDcard_jpeg](https://github.com/Bodmer/TFT_eSPI/tree/master/examples/Generic/ESP32_SDcard_jpeg).
+
 #### Poems
 
 * ['Twas the Night Before Christmas](https://parade.com/1136533/jessicasager/twas-the-night-before-christmas-words/#twas-the-night-before-christmas-a-visit-full-poem)
