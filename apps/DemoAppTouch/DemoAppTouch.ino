@@ -9,7 +9,6 @@
 #include <TFT_eSPI.h>
 #include "Free_Fonts.h"
 #include <SPI.h>
-#include <SafeString.h>
 #include "wificlient.h"
 #include <mutex>
 #include "poem.h"
@@ -18,8 +17,6 @@
 #include "pauser.h"
 // JPEG decoder library
 #include <JPEGDecoder.h>
-
-cSF(my_SS,64);
 
 #include "FS.h"
 #include "SD.h"
