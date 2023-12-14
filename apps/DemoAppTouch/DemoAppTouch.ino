@@ -1,7 +1,8 @@
 /*******************************************************************
     DemoApp for the ESP32 Cheap Yellow Display.
 
-    Written by Rick Hale
+    Written by Rick Hale based on ideas from
+    https://forum.arduino.cc/t/esp32-2432s028r-all-in-one-display-touch-spi-problems/1059746/33
  *******************************************************************/
 
 #include <TFT_eTouch.h>
@@ -321,6 +322,7 @@ void loop() {
   static unsigned long repeat_count = 0;
   Serial.printf("Starting iteration #%ld\n", ++repeat_count);
   Fractal fractal;
+  listDirWithCallback(SD, "/Documents/Pictures", 2, showPicture);
   Poem poem(config, pauser);
   for (int i = 0; i < config["poems"].length(); i++) {
     poem.showPoem(i);
@@ -328,6 +330,5 @@ void loop() {
     fractal.drawMandelbrot();
     pauser->wait();
   }
-  listDirWithCallback(SD, "/Documents/Pictures", 2, showPicture);
   Serial.printf("Finished iteration #%ld\n", repeat_count);
 }

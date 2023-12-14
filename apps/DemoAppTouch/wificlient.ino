@@ -20,7 +20,8 @@ const int   daylightOffset_sec = 3600;
 
 // refresh the weather only every 15 minutes...
 const unsigned long timerDelay = 15 * 60 * 1000;
-const unsigned char wifiicon[] ={ // wifi icon
+// https://forum.arduino.cc/t/display-wifi-icon-when-connected-to-wifi/1033156
+const unsigned char wifiIcon[] ={ // wifi icon
   0x00, 0xff, 0x00, 0x7e, 0x00, 0x18,0x00, 0x00
 };
 
@@ -185,7 +186,7 @@ void WifiClient::showDateAndTemp(void * pvParameters) {
       tft.setTextColor(TFT_RED, TFT_BLACK);
       int iconX = 225;
       if (connected) {
-        tft.drawBitmap(iconX,0,wifiicon,8,8,TFT_WHITE);
+        tft.drawBitmap(iconX,0,wifiIcon,8,8,TFT_WHITE);
       }
       else {
         tft.drawString("X", iconX, 0, fontSize);
