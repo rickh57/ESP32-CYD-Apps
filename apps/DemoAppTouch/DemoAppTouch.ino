@@ -306,7 +306,7 @@ void showPicture(const char *filename) {
   int y = 0; //(tft.height() - 300) / 2 - 1;
 
   Serial.printf("showPicture(%s)\n", filename);
-  char fileNameBuffer[64];
+  char fileNameBuffer[128];
   sprintf(fileNameBuffer, "/Documents/Pictures/%s", filename);
   eraseScreen(TFT_BLACK);
   xSemaphoreTake(mutex, portMAX_DELAY); // enter critical section

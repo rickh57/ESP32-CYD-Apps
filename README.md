@@ -14,7 +14,7 @@ The sdcard folder contains sample configuration and data for the apps to use. Yo
 
 #### Pictures
 
-The pictures were copied from the [TFT_eSPI examples](https://github.com/Bodmer/TFT_eSPI/tree/master/examples/Generic/ESP32_SDcard_jpeg/Data). The sample program will display all of the jpeg pictures in `/Documents/Pictures`. However, the display size is only 320x240 pixels so the pictures will likely be trimmed.
+The pictures in this repo were copied from the [TFT_eSPI examples](https://github.com/Bodmer/TFT_eSPI/tree/master/examples/Generic/ESP32_SDcard_jpeg/Data). The sample program will display all of the jpeg pictures in `/Documents/Pictures`. However, the display size is only 320x240 pixels so the pictures will likely be trimmed.
 
 The jpeg display logic is based on [ESP32_SDcard_jpeg](https://github.com/Bodmer/TFT_eSPI/tree/master/examples/Generic/ESP32_SDcard_jpeg).
 
